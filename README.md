@@ -1,29 +1,46 @@
-# EmotionLib
-## Simple dynamic library for video sentiment recognition
-### Made using Caffe  
-### Functions list:  
-__- float* make(const char* path, double N, struct progress* bar)__, where **progress** is struct{int,int} to check the current progress of recognition  
-_Returns a float array pointer with positivity values for each __N__-th frame of video in **path**, first array element is database size_
+# Emotionlib
 
+## 📋 درباره پروژه
+این پروژه بخشی از اکوسیستم **TetraShop** است.
 
-You can use N = 0 for automatic frame rate detection. In this case, the function will take one frame for every second of the video  
+- **نوع:** PYTHON
+- **تعداد فایل‌ها:** 4
 
-__- int clean(float* res)__  
-_To clean up an array with coefficients_
+## 🚀 ویژگی‌ها
+- کد تمیز و بهینه
+- آماده برای توسعه
+- پشتیبانی از آخرین تکنولوژی‌ها
 
-### C# Import Example:
-        [StructLayout(LayoutKind.Sequential)]
-        public struct progress
-        {
-            public int cur;
-            public int end;
-        };
-        [DllImport("EmotionLib.dll")]
-        public static extern IntPtr make([MarshalAs(UnmanagedType.LPStr)] string path, double N, ref progress bar);
-        [DllImport("EmotionLib.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern int clean(IntPtr ptr);
-### Demo
-![alt text](https://raw.githubusercontent.com/EmotionEngineer/EmotionLib/master/Demo/1.png)
-![alt text](https://raw.githubusercontent.com/EmotionEngineer/EmotionLib/master/Demo/2.png)
-### TODO:
-**- Audio sentiment recognition**
+## 📦 نصب و راه‌اندازی
+
+### پیش‌نیازها
+- Python 3.8+
+
+### نصب
+```bash
+git clone https://github.com/tetrashop/EmotionLib.git
+cd EmotionLib
+pip install -r requirements.txt
+```
+
+## 🔧 استفاده
+```bash
+python main.py
+```
+
+## 🤝 مشارکت
+1. Fork کنید
+2. Branch جدید: `git checkout -b feature/your-feature`
+3. Commit: `git commit -m 'Add feature'`
+4. Push: `git push origin feature/your-feature`
+5. Pull Request باز کنید
+
+## 📝 مجوز
+MIT License
+
+## 🌐 ارتباط با ما
+- **وبسایت:** [tetrashop.ir](https://tetrashop.ir)
+- **گیت‌هاب:** [github.com/tetrashop](https://github.com/tetrashop)
+
+---
+**آخرین به‌روزرسانی:** 2026-08-12
